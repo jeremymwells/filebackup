@@ -1,0 +1,7 @@
+**/*.pyc
+.idea/
+.Python
+lib/**/
+!lib/burn*/
+bin/
+include/
