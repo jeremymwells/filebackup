@@ -6,7 +6,7 @@ from classes.mediaFileFilter import *
 def main() :
 
   all_file_names = DirectoryWalker().get_file_names('.')
-  filtered_names = MediaFileFilter().get_allowed_file_types(all_file_names)
+  filtered_names = FileFilter().get_allowed_file_types(all_file_names)
 
   mongo = MongoConnector()
   
