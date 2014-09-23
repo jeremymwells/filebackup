@@ -2,6 +2,9 @@ import os
 
 class DirectoryWalker :
 
+  def __init__(self):
+      pass
+
   def get_file_names(self, path):
     return self.__walk_directory__(path, True)
 
