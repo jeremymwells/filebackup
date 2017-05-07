@@ -1,5 +1,0 @@
-include setup.py MANIFEST.in
-include README copyright changelog
-include burn.conf burn.conf-dist
-recursive-include bin *
-recursive-include doc *

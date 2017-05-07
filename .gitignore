@@ -5,3 +5,5 @@ lib/**/
 !lib/burn*/
 bin/
 include/
+out/
+.DS_Store
