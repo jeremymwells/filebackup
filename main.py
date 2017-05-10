@@ -13,11 +13,16 @@ def main():
     # filter out files we don't want -->
     filtered_names = FileFilter().get_allowed_file_types(all_file_names)
 
+    # uncomment to filter out non-media files, and only keep [".mp4",".avi",".mp3",".mkv",".wav"] files -->
+    # filtered_names = MediaFileFilter().get_allowed_file_types(filtered_names)
+
     fileWriter = FileWriter()
 
     #for all found files -->
     for name in filtered_names:
-      fileWriter.copy_file(target_directory, MediaItem(name))
+      media_item = MediaItem(name)
+      fileWriter.copy_file(target_directory, media_item)
+      fileWriter.write(target_directory, media_item)
 
     return 0
 
