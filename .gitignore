@@ -7,3 +7,4 @@ bin/
 include/
 out/
 .DS_Store
+testInput/

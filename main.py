@@ -2,6 +2,7 @@ from classes.directoryWalker import *
 from classes.mediaItem import *
 from classes.mediaFileFilter import *
 from classes.fileWriter import *
+from classes.fileMetaData import *
 
 source_directory = '.'
 target_directory = './out'
@@ -17,11 +18,15 @@ def main():
     # filtered_names = MediaFileFilter().get_allowed_file_types(filtered_names)
 
     fileWriter = FileWriter()
+    fileMetaData = FileMetaData()
 
     #for all found files -->
     for name in filtered_names:
       media_item = MediaItem(name)
       fileWriter.copy_file(target_directory, media_item)
+
+      print fileMetaData.get(media_item.full_name)
+
       fileWriter.write(target_directory, media_item)
 
     return 0
